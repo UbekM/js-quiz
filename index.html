@@ -1,0 +1,58 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inner-container">
+        <div id="instructions">
+          <h1>Welcome to the Simple Quiz</h1>
+          <p style="padding: 1rem 0rem">
+            <b>Read the instructions carefully before you start the quiz:</b>
+          </p>
+          <ul>
+            <li>You will be presented with a series of questions.</li>
+            <li>Select the correct answer from the provided options.</li>
+            <li>Your score will be displayed at the end of the quiz.</li>
+          </ul>
+          <button id="continue-btn">Continue</button>
+        </div>
+        <div id="quiz" style="display: none">
+          <h1>Simple Quiz</h1>
+          <h2 id="question-number">Score: 0</h2>
+          <h2 id="question">1. Question</h2>
+          <div id="answer-buttons">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+          </div>
+          <h4 id="result"></h4>
+          <button id="btn2">Next</button>
+        </div>
+        <div id="final-score" style="display: none">
+          <h2>Final Score</h2>
+          <p id="score-message"></p>
+          <label for="username">Enter your name:</label>
+          <input type="text" id="username" />
+          <button id="save-score-btn">Save Score</button>
+          <h3 id="highscore-message"></h3>
+          <button id="restart-btn">Restart Quiz</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
