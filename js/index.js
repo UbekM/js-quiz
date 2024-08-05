@@ -254,6 +254,8 @@ const quizEl = document.getElementById("quiz");
 let currentQuestionIndex = 0;
 let score = 0;
 
+const jsConfetti = new JSConfetti();
+
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
@@ -298,6 +300,10 @@ function selectAnswer(e) {
     selectedBtn.classList.add("correct");
     score++;
     resultEl.innerHTML = "Correct!";
+    jsConfetti.addConfetti({
+      confettiRadius: 2,
+      confettiNumber: 200,
+    });
   } else {
     selectedBtn.classList.add("incorrect");
     resultEl.innerHTML = "Incorrect!";
