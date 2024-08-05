@@ -253,6 +253,7 @@ const quizEl = document.getElementById("quiz");
 
 let currentQuestionIndex = 0;
 let score = 0;
+let highScore = localStorage.getItem("highScore") || 0;
 
 const jsConfetti = new JSConfetti();
 
@@ -335,6 +336,13 @@ function showScore() {
   questionEl.innerHTML = `You scored ${score} out of ${
     questions.length
   } (${percentage.toFixed(1)}%)`;
+  if (score > highScore) {
+    highScore = score;
+    localStorage.setItem("highScore", highScore);
+    questionEl.innerHTML += `<br>New High Score: ${highScore}`;
+  } else {
+    questionEl.innerHTML += `<br>High Score: ${highScore}`;
+  }
   nextButton.innerHTML = "Play Again";
   nextButton.style.display = "block";
   questionNumberEl.innerHTML = "";
